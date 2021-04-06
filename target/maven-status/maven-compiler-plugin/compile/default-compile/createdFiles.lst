@@ -1,0 +1,16 @@
+com\mapper\UserMapper.class
+com\config\LoginHandlerInterceptor.class
+com\pojo\Student.class
+com\service\StuService.class
+com\DemoApplication.class
+com\controller\LoginController.class
+com\pojo\User.class
+com\controller\UserController.class
+com\mapper\StuMapper.class
+com\config\SecurityConfig.class
+com\service\UserService.class
+com\pojo\Access.class
+com\config\MyMvcConfig.class
+com\pojo\Teacher.class
+com\controller\StuController.class
+com\config\MyLocaleResolver.class
