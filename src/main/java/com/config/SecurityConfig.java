@@ -2,6 +2,7 @@ package com.config;
 
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -22,5 +23,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .withUser("sec").password(new BCryptPasswordEncoder().encode("1234")).roles("Role1");
     }
 
-
+    @Override
+    public void configure(WebSecurity web) throws Exception {
+        web.ignoring().antMatchers("/static/css/**","/static/img/**","/static/js/**");
+    }
 }
